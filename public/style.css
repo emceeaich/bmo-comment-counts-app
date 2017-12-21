@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif
+}
+body {
+  margin: 0;
+  padding: 2vw;
+  height: 100vh;
+  width: 100vw;
+}
+h1 {
+  margin: 0;
+  line-height: 120%;
+  font-family: 'Zilla Slab Highlight', serif;
+  font-weight: bold;
+}
+h2 {
+  margin: 0;
+  font-family: 'Zilla Slab', serif;
+  font-weight: 600;
+  align-self: center;
+}
+li {
+  list-style: none;
+  line-height: 200%;
+}
