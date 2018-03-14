@@ -3,6 +3,7 @@
 */
 
 const buglist = document.querySelector('.buglist');
+const link    = document.querySelector('.link a');
 
 function updateBugList() {
   fetch('/bugs')
@@ -26,6 +27,8 @@ function updateBugList() {
             <strong>${bug.comments}</strong>
             </li>`)          
           });
+          
+          link.href = 'https://bugzilla.mozilla.org/buglist.cgi?bug_id=' + encodeURIComponent(body.bugs.map(bug => bug.id).join(','));
         }
       })
     }
@@ -33,3 +36,4 @@ function updateBugList() {
 }
 
 updateBugList();
+setInterval(updateBugList, 5*60*60);
